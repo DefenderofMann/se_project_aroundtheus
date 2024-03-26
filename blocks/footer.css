@@ -4,7 +4,7 @@
   margin-top: 67px;
   margin-left: 90px;
   color: #545454;
-  margin-left: ;
+  margin-left: 50px;
 }
 
 .footer__copywright {
@@ -27,10 +27,11 @@
     justify-content: center;
     flex-direction: column;
     padding-top: 28px;
+    padding-left: 19px;
+    padding-right: 19px;
   }
   .profile {
     display: grid;
-    background-color: pink;
     width: 282px;
     height: 286px;
   }
@@ -52,7 +53,7 @@
     font-weight: 500;
     line-height: 26.63px;
     text-align: center;
-    width: 196px;
+    max-width: 373px;
     height: 22px;
     margin-left: auto;
   }
@@ -68,11 +69,19 @@
     margin: 0;
     width: 282px;
     height: 50px;
-    margin-left: 27px;
   }
   .profile__edit-button {
     height: 18px;
     width: 18px;
     margin-left: 15px;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .card:last-child {
+    margin-bottom: 46px;
+  }
+  .footer {
+    margin-bottom: 36px;
   }
 }
