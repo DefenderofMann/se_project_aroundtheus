@@ -16,5 +16,3 @@ about the particular locations.
 Link:
 https://defenderofmann.github.io/se_project_aroundtheus/
 
-video:
-https://youtu.be/eTD8ud598qU
