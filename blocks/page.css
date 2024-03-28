@@ -17,3 +17,16 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
+@media screen and (max-width: 480px) {
+  .page {
+    justify-content: center;
+    flex-direction: column;
+    max-width: 320px;
+    padding-top: 28px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-bottom: 36px;
+    margin: 0;
+  }
+}

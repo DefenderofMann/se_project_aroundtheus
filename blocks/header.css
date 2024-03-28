@@ -3,4 +3,15 @@
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 40px;
+  border-bottom: rgb(84 84 84 / 0.7);
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    margin-left: 0;
+    width: 100%;
+    min-height: 24px;
+    margin-bottom: 0;
+    border: 1px solid rgb(84 84 84 / 0.7);
+  }
 }
