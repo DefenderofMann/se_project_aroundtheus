@@ -1,13 +1,13 @@
 .page {
   background-color: black;
   color: white;
-  margin: 45px 200px;
+  padding-top: 45px;
+  padding-bottom: 60px;
   max-width: 1280px;
 }
 
 .page__section {
   max-width: 880px;
-  width: 100%;
   position: relative;
   margin: 0 auto;
 }
@@ -16,17 +16,18 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: auto;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 620x) {
   .page {
     justify-content: center;
     flex-direction: column;
     max-width: 320px;
     padding-top: 28px;
-    padding-left: 19px;
-    padding-right: 19px;
     padding-bottom: 36px;
-    margin: 0;
+  }
+  .page__content {
+    margin: auto;
   }
 }

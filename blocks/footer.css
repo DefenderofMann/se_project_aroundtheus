@@ -2,7 +2,7 @@
   max-width: 318px;
   min-height: 18px;
   color: #545454;
-  margin-bottom: 0;
+  margin: auto 0;
 }
 
 .footer__copyright {
@@ -17,13 +17,18 @@
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 620px) {
   .footer {
+    margin-left: 19px;
+    width: 100%;
+    min-height: 14px;
   }
   .footer__copyright {
     max-width: 282px;
+    margin-left: 19px;
     min-height: 14px;
     font-size: 14px;
     line-height: 16.94px;
+    margin-left: 19px;
   }
 }

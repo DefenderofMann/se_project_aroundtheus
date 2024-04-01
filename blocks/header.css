@@ -1,17 +1,25 @@
 .header {
   max-width: 880px;
-  margin-left: 0;
-  margin-right: 0;
   margin-bottom: 40px;
+  margin-left: 200px;
   border-bottom: rgb(84 84 84 / 0.7);
 }
 
-@media screen and (max-width: 480px) {
+.header__logo {
+  margin-bottom: 41px;
+}
+
+@media screen and (max-width: 620px) {
   .header {
-    margin-left: 0;
-    width: 100%;
+    max-width: 320px;
     min-height: 24px;
-    margin-bottom: 0;
+    margin: 0;
     border: 1px solid rgb(84 84 84 / 0.7);
+  }
+  .header__logo {
+    margin-bottom: 32px;
+    margin-left: 27px;
+    max-width: 126px;
+    min-height: 24px;
   }
 }
