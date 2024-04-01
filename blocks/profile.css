@@ -1,7 +1,6 @@
 .profile {
   display: flex;
   align-items: center;
-  max-width: 880px;
   min-height: 120px;
   margin: auto;
 }
@@ -94,29 +93,7 @@
   min-height: 120px;
 }
 
-@media screen and (max-width: 620px) {
-  .profile {
-    display: grid;
-    max-width: 282px;
-    min-height: 286px;
-    padding-top: 0;
-    margin-top: 42px;
-    justify-content: center;
-    height: fit-content;
-  }
-  .profile__image {
-    width: 169px;
-    height: 128px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 26px;
-  }
-  .profile__info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-  }
+@media screen and (max-width: 760px) {
   .profile__name {
     font-size: 22px;
     font-weight: 500;
@@ -134,6 +111,29 @@
     text-align: center;
     margin-bottom: 36px;
   }
+}
+
+@media screen and (max-width: 620px) {
+  .profile {
+    display: grid;
+    padding-top: 0;
+    margin-top: 42px;
+    justify-content: center;
+  }
+  .profile__image {
+    width: 169px;
+    height: 128px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 26px;
+  }
+  .profile__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
   .profile__add-button {
     background: transparent url(../images/AddButton.svg) center no-repeat;
     margin: 0;
