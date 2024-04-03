@@ -17,5 +17,5 @@ Link:
 https://defenderofmann.github.io/se_project_aroundtheus/
 
 video:
-https://drive.google.com/file/d/1jHd48QIK-sqHZu31ub6Aa9iG1_6lBrts/view?usp=drive_link
+https://drive.google.com/file/d/1vqsJ07TXoIkcEZX9iKJNrBL290pHsRpl/view?usp=sharing
 
