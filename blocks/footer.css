@@ -19,6 +19,7 @@
   .footer {
     width: 100%;
     min-height: 14px;
+    padding: 0 20px;
   }
   .footer__copyright {
     max-width: 282px;

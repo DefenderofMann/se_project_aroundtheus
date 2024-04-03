@@ -17,4 +17,8 @@
     justify-content: center;
     flex-direction: column;
   }
+  .page__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
