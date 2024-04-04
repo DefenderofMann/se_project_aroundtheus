@@ -1,5 +1,6 @@
 .cards {
   font-family: "Inter", Arial, sans-serif;
+  padding: 0 20px;
 }
 
 .cards__list {
@@ -19,9 +20,9 @@
     margin-bottom: 0;
   }
   .cards {
+    padding: 0 19px;
     margin-bottom: 48px;
     margin-top: 0;
     max-width: 282px;
-    padding: 0 20px;
   }
 }

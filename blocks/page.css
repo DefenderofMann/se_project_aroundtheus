@@ -8,7 +8,6 @@
 }
 
 .page__content {
-  padding: 0 20px;
   color: #fff;
 }
 
@@ -18,7 +17,6 @@
     flex-direction: column;
   }
   .page__content {
-    padding-left: 0;
-    padding-right: 0;
+    margin-top: 28px;
   }
 }

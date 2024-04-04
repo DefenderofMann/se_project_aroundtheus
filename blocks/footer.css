@@ -2,6 +2,7 @@
   min-height: 18px;
   color: #545454;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .footer__copyright {
@@ -17,9 +18,8 @@
 
 @media screen and (max-width: 620px) {
   .footer {
-    width: 100%;
+    padding: 0 19px;
     min-height: 14px;
-    padding: 0 20px;
   }
   .footer__copyright {
     max-width: 282px;
