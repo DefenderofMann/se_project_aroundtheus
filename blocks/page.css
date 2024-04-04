@@ -16,7 +16,4 @@
     justify-content: center;
     flex-direction: column;
   }
-  .page__content {
-    margin-top: 28px;
-  }
 }
