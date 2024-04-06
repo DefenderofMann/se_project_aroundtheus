@@ -103,6 +103,7 @@
     margin-bottom: 14px;
     margin-left: 0;
     min-height: 22px;
+    max-width: 196px;
   }
   .profile__description {
     width: 100%;
@@ -132,6 +133,7 @@
     margin-bottom: 30px;
   }
   .profile__info {
+    max-width: 282px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
