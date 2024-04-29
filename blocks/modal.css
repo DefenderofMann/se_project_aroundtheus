@@ -4,7 +4,6 @@
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: ;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 0 19px;
   display: none;
@@ -46,6 +45,10 @@
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
+}
+
+.modal_closed {
+  display: none;
 }
 
 .modal__form {
