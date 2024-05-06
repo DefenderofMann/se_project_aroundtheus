@@ -90,6 +90,12 @@
   .modal__container {
     width: 282px;
     height: 322px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    position: absolute;
+    top: 123px;
+    left: 19px;
   }
   .modal__heading {
     width: 238px;
@@ -106,5 +112,10 @@
     width: 238px;
     height: 46px;
     margin: 0 22px 25px;
+  }
+  .modal__close {
+    width: 26px;
+    height: 26px;
+    left: 257px;
   }
 }
