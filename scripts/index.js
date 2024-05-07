@@ -45,7 +45,7 @@ const cardListEl = document.querySelector(".cards__list");
 function handleProfileEditSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
-  profileDescriptionInput.textContent = profileDescription.value;
+  profileDescription.textContent = profileDescriptionInput.value;
   closePopup();
 }
 
@@ -71,7 +71,7 @@ profileEditButton.addEventListener("click", () => {
 
 profileEditCloseButton.addEventListener("click", closePopup);
 
-profileEditForm.addEventListener("submit", handleprofileeditsubmit);
+profileEditForm.addEventListener("submit", handleProfileEditSubmit);
 
 initialCards.forEach((cardData) => {
   const cardElement = getCardElement(cardData);
