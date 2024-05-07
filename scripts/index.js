@@ -42,7 +42,7 @@ const cardTemplate =
   document.querySelector("#card-template").content.firstElementChild;
 const cardListEl = document.querySelector(".cards__list");
 
-function handleprofileeditsubmit(e) {
+function handleProfileEditSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
   profileDescriptionInput.textContent = profileDescription.value;
