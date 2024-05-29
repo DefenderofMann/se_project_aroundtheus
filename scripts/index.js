@@ -49,18 +49,14 @@ const addNewCardButton = document.querySelector(".profile__add-button");
 const addNewCardCloseButton = document.querySelector("#add-modal-close-button");
 const cardTitleInput = document.querySelector(".modal__input_type_title");
 const cardLinkInput = document.querySelector("#profile__input-type-URL");
-const cardDeleteButton = document.querySelectorAll("#delete");
+const previewImageModal = document.querySelector("#preview-image-modal");
+const previewImageButton = document.querySelector(".card__preview-button");
+const previewModalClose = document.querySelector("#preview-image-close-button");
 function handleProfileEditSubmit(e) {
   e.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
   profileDescription.textContent = profileDescriptionInput.value;
   closePopup();
-}
-
-function deleteCard() {
-  cardListEl.classList.remove(
-    "modal__input_type_title #profile__input-type-URL"
-  );
 }
 
 function closePopup() {
@@ -72,6 +68,15 @@ function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImage = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__title");
+  const likebutton = cardElement.querySelector(".card__like-button");
+  likebutton.addEventListener("click", () => {
+    likebutton.classList.toggle("card__like-button_active");
+  });
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
+  cardDeleteButton.addEventListener("click", () => {
+    cardElement.remove();
+  });
+  cardImage.addEventListener("click", () => {});
   cardTitleEl.textContent = cardData.name;
   cardImage.src = cardData.link;
   cardImage.alt = cardData.name;
@@ -115,12 +120,3 @@ function handleAddCardFormSubmit(evt) {
 }
 
 addNewCardCloseButton.addEventListener("click", closePopup);
-
-const likeButtons = document.querySelectorAll(".card__like-button");
-likeButtons.forEach((likebutton) => {
-  likebutton.addEventListener("click", () => {
-    likebutton.classList.toggle("card__like-button_active");
-  });
-});
-
-cardDeleteButton.addEventListener("click");
