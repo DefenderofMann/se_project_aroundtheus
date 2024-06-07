@@ -64,9 +64,11 @@ function handleProfileEditSubmit(e) {
 function openPopup(popup) {
   popup.classList.add("modal_opened");
 }
+
 function closePopup(popup) {
   popup.classList.remove("modal_opened");
 }
+
 function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImage = cardElement.querySelector(".card__image");
@@ -134,5 +136,3 @@ function handleAddCardFormSubmit(evt) {
   addNewCardForm.reset();
   closePopup(addNewCardModal);
 }
-addNewCardCloseButton.addEventListener("click", closePopup);
-previewImageClose.addEventListener("click", closePopup);

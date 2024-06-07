@@ -154,7 +154,7 @@
     width: 238px;
     height: 22px;
     margin: 25px 22px 75px;
-    size: 18px;
+    font-size: 18px;
   }
   .modal__input {
     width: 238px;
@@ -165,6 +165,7 @@
     width: 238px;
     height: 46px;
     margin: 0 22px 25px;
+    font-size: 14px;
   }
   .modal__close {
     width: 26px;
