@@ -57,15 +57,23 @@
             id="profile-title-input"
             placeholder="Name"
             type="text"
+            maxlength="40"
+            minlength="2"
+            required
           />
+          <span class="popup__error"></span>
+
           <input
             class="modal__input"
             name="description"
             id="profile-description-input"
             placeholder="Description"
             type="text"
+            maxlength="200"
+            minlength="2"
+            required
           />
-
+          <span class="popup__error popup__profile-description-error"></span>
           <button class="button modal__button" type="submit">Save</button>
         </form>
       </div>
@@ -83,14 +91,29 @@
             id="card-title-input"
             placeholder="title"
             type="text"
+            maxlength="40"
+            minlength="2"
+            required
           />
+          <span
+            class="popup__error popup__error_visible"
+            id="card-title-input-error"
+            >Please fill out this field</span
+          >
+
           <input
             class="modal__input"
             name="URL"
             id="profile__input-type-URL"
             placeholder="Image Link"
             type="text"
+            maxlength="200"
+            minlength="2"
+            required
           />
+          <span class="popup__error popup__error_visible"
+            >Please enter a web address</span
+          >
 
           <button class="button modal__button" type="submit">Save</button>
         </form>
@@ -119,5 +142,6 @@
       </form>
     </div>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validation.js"></script>
   </body>
 </html>

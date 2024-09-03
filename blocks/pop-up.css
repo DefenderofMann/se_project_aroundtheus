@@ -1,0 +1,33 @@
+.popup__error {
+  position: absolute;
+  width: 164px;
+  height: 12px;
+  top: 142px;
+  gap: 0px;
+  opacity: 0;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 36px;
+}
+
+.popup__error_visible {
+  opacity: 1;
+  color: rgba(255, 0, 0, 1);
+}
+
+.popup__input_type_error {
+  border-bottom: 1px solid rgba(255, 0, 0, 1);
+}
+
+.popup__button_disabled {
+  opacity: 0.2;
+  background: white;
+  color: rgba(0, 0, 0, 1);
+}
+
+.popup__profile_description_error {
+}

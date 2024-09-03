@@ -136,3 +136,27 @@ function handleAddCardFormSubmit(evt) {
   addNewCardForm.reset();
   closePopup(addNewCardModal);
 }
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closePopup(profileEditModal);
+  }
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closePopup(addNewCardModal);
+  }
+});
+
+profileEditModal.addEventListener("click", (e) => {
+  if (e.target === profileEditModal) {
+    closePopup(profileEditModal);
+  }
+});
+
+addNewCardModal.addEventListener("click", (e) => {
+  if (e.target === addNewCardModal) {
+    closePopup(addNewCardModal);
+  }
+});
