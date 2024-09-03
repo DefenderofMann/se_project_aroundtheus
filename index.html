@@ -51,29 +51,34 @@
         <button class="modal__close" id="modal-close-button"></button>
         <p class="modal__heading">Edit Profile</p>
         <form class="modal__form" id="edit-profile-form">
-          <input
-            class="modal__input"
-            name="title"
-            id="profile-title-input"
-            placeholder="Name"
-            type="text"
-            maxlength="40"
-            minlength="2"
-            required
-          />
-          <span class="popup__error"></span>
-
-          <input
-            class="modal__input"
-            name="description"
-            id="profile-description-input"
-            placeholder="Description"
-            type="text"
-            maxlength="200"
-            minlength="2"
-            required
-          />
-          <span class="popup__error popup__profile-description-error"></span>
+          <lable>
+            <input
+              class="modal__input"
+              name="title"
+              id="profile-title-input"
+              placeholder="Name"
+              type="text"
+              maxlength="40"
+              minlength="2"
+              required
+            />
+            <span class="popup__error">Please fill out this field</span>
+          </lable>
+          <label>
+            <input
+              class="modal__input"
+              name="description"
+              id="profile-description-input"
+              placeholder="Description"
+              type="text"
+              maxlength="200"
+              minlength="2"
+              required
+            />
+            <span class="popup__error popup__profile-description-error"
+              >Please fill out this field</span
+            >
+          </label>
           <button class="button modal__button" type="submit">Save</button>
         </form>
       </div>
@@ -85,36 +90,38 @@
         <button class="modal__close" id="add-modal-close-button"></button>
         <p class="modal__heading">New Place</p>
         <form class="modal__form" id="add-card-form">
-          <input
-            class="modal__input modal__input_type_title"
-            name="title"
-            id="card-title-input"
-            placeholder="title"
-            type="text"
-            maxlength="40"
-            minlength="2"
-            required
-          />
-          <span
-            class="popup__error popup__error_visible"
-            id="card-title-input-error"
-            >Please fill out this field</span
-          >
-
-          <input
-            class="modal__input"
-            name="URL"
-            id="profile__input-type-URL"
-            placeholder="Image Link"
-            type="text"
-            maxlength="200"
-            minlength="2"
-            required
-          />
-          <span class="popup__error popup__error_visible"
-            >Please enter a web address</span
-          >
-
+          <lable>
+            <input
+              class="modal__input modal__input_type_title"
+              name="title"
+              id="card-title-input"
+              placeholder="title"
+              type="text"
+              maxlength="40"
+              minlength="2"
+              required
+            />
+            <span
+              class="popup__error popup__error_visible"
+              id="card-title-input-error"
+              >Please fill out this field</span
+            >
+          </lable>
+          <label>
+            <input
+              class="modal__input"
+              name="URL"
+              id="profile__input-type-URL"
+              placeholder="Image Link"
+              type="text"
+              maxlength="200"
+              minlength="2"
+              required
+            />
+            <span class="popup__error popup__error_visible"
+              >Please enter a web address</span
+            >
+          </label>
           <button class="button modal__button" type="submit">Save</button>
         </form>
       </div>
