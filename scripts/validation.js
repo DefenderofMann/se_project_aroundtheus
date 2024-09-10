@@ -5,6 +5,13 @@ function showInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
   errorMessageEl.classList.add(errorClass);
 }
 
+function hideInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
+  const errorMessageEl = formEl.querySelector("#" + inputEl.id + "-error");
+  inputEl.classList.remove(inputErrorClass);
+  errorMessageEl.textContent = "";
+  errorMessageEl.classList.remove(errorClass);
+}
+
 function checkInputValidity(formEl, inputEl, config) {
   if (!inputEl.validity.valid) {
     showInputError(formEl, inputEl, config);
@@ -12,6 +19,10 @@ function checkInputValidity(formEl, inputEl, config) {
     hideInputError(formEl, inputEl, config);
   }
   console.log("kimchi");
+}
+
+function hasInvalidInput(inputList) {
+  return !inputList.every((inputEl) => inputEl.validity.valid);
 }
 
 function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
@@ -22,11 +33,11 @@ function toggleButtonState(inputEls, submitButton, { inactiveButtonClass }) {
     }
   });
   if (foundInvalid) {
-    submitButton.classList.add(config);
+    submitButton.classList.add(inactiveButtonClass);
     submitButton.disabled = true;
   } else {
-    submitButton.classList.remove(config);
-    submitButton.disabled = true;
+    submitButton.classList.remove(inactiveButtonClass);
+    submitButton = true;
   }
 }
 
@@ -54,12 +65,12 @@ function enableValidation(config, formEl) {
   });
 }
 const config = {
-  formSelector: "modal__form",
-  inputSelector: "modal__input",
-  submitButtonSelector: "modal__button",
-  inactiveButtonClass: "popup__button_disabled",
-  inputErrorClass: "popup__input_type_error",
-  errorClass: "popup__error_visible",
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__button",
+  inactiveButtonClass: ".popup__button_disabled",
+  inputErrorClass: ".popup__input_type_error",
+  errorClass: ".popup__error_visible",
 };
 
 enableValidation(config);
