@@ -14,11 +14,10 @@ function hideInputError(formEl, inputEl, { inputErrorClass, errorClass }) {
 
 function checkInputValidity(formEl, inputEl, config) {
   if (!inputEl.validity.valid) {
-    showInputError(formEl, inputEl, config);
+    return showInputError(formEl, inputEl, config);
   } else {
     hideInputError(formEl, inputEl, config);
   }
-  console.log("kimchi");
 }
 
 function hasInvalidInput(inputList) {
@@ -55,9 +54,8 @@ function setEventListeners(formEl, config) {
   });
 }
 
-function enableValidation(config, formEl) {
+function enableValidation(config) {
   const formEls = [...document.querySelectorAll(config.formSelector)];
-  const submitButton = formEl.querySelector(".modal__button");
   formEls.forEach((formEl) => {
     formEl.addEventListener("submit", (e) => {
       e.preventDefault();
