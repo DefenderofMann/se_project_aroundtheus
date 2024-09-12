@@ -160,3 +160,15 @@ addNewCardModal.addEventListener("click", (e) => {
     closePopup(addNewCardModal);
   }
 });
+
+previewImageModal.addEventListener("click", (e) => {
+  if (e.target === previewImageModal) {
+    closePopup(previewImageModal);
+  }
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closePopup(previewImageModal);
+  }
+});
