@@ -137,31 +137,14 @@ function handleAddCardFormSubmit(evt) {
   closePopup(addNewCardModal);
 }
 
-window.addEventListener("click", (e) => {
-  if (e.target === profileEditModal) {
-    closePopup(profileEditModal);
-  }
-});
-
-window.addEventListener("click", (e) => {
-  if (e.target === previewImageModal) {
-    closePopup(previewImageModal);
-  }
-});
-
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closePopup(previewImageModal);
-  }
-});
-
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closePopup(previewImageModal);
-  }
-});
-
-window.addEventListener("click", (e) => {
-  window.removeEventListener("click", closedCardModalClick);
-  console.log("removed");
-});
+function modalClick() {
+  const modals = document.querySelectorAll(".modal");
+  evt.preventDefault();
+  modals.forEach((modal) => {
+    modal.addEventListener("mousedown", (evt) => {
+      if (evt.target.classList.contains("modal_opened")) {
+        closePopup(modal);
+      }
+    });
+  });
+}
