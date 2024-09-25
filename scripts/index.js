@@ -137,31 +137,26 @@ function handleAddCardFormSubmit(evt) {
   closePopup(addNewCardModal);
 }
 
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closePopup(profileEditModal);
-  }
-});
-
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
+function closeCardModalPush("keydown", (e) => {
+  if(e.key === "Escape") {
     closePopup(addNewCardModal);
   }
 });
 
-profileEditModal.addEventListener("click", (e) => {
+
+let closedCardModalClick = window.addEventListener("click", (e) => {
+  closePopup(addNewCardModal);
+});
+
+window.addEventListener("click", (e) => {
   if (e.target === profileEditModal) {
     closePopup(profileEditModal);
   }
 });
 
-addNewCardModal.addEventListener("click", (e) => {
-  if (e.target === addNewCardModal) {
-    closePopup(addNewCardModal);
-  }
-});
 
-previewImageModal.addEventListener("click", (e) => {
+
+window.addEventListener("click", (e) => {
   if (e.target === previewImageModal) {
     closePopup(previewImageModal);
   }
@@ -171,4 +166,15 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closePopup(previewImageModal);
   }
+});
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closePopup(previewImageModal);
+  }
+});
+
+window.addEventListener("click", (e) => {
+  window.removeEventListener("click", closedCardModalClick);
+  console.log("removed");
 });
