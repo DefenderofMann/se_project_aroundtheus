@@ -137,24 +137,11 @@ function handleAddCardFormSubmit(evt) {
   closePopup(addNewCardModal);
 }
 
-function closeCardModalPush("keydown", (e) => {
-  if(e.key === "Escape") {
-    closePopup(addNewCardModal);
-  }
-});
-
-
-let closedCardModalClick = window.addEventListener("click", (e) => {
-  closePopup(addNewCardModal);
-});
-
 window.addEventListener("click", (e) => {
   if (e.target === profileEditModal) {
     closePopup(profileEditModal);
   }
 });
-
-
 
 window.addEventListener("click", (e) => {
   if (e.target === previewImageModal) {
