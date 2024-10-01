@@ -53,6 +53,7 @@ const previewImageModal = document.querySelector("#modal__image-preview");
 const previewImageClose = document.querySelector("#modal__close-preview");
 const previewImageTitle = document.querySelector(".modal__preview-title");
 const previewImagePic = document.querySelector(".preview__image");
+const modals = document.querySelectorAll(".modal");
 
 function handleProfileEditSubmit(e) {
   e.preventDefault();
@@ -63,10 +64,12 @@ function handleProfileEditSubmit(e) {
 
 function openPopup(popup) {
   popup.classList.add("modal_opened");
+  popup.addEventListener("mousedown", handleClickOverlay);
 }
 
 function closePopup(popup) {
   popup.classList.remove("modal_opened");
+  popup.removeEventListener("mousedown", handleClickOverlay);
 }
 
 function getCardElement(cardData) {
@@ -137,14 +140,8 @@ function handleAddCardFormSubmit(evt) {
   closePopup(addNewCardModal);
 }
 
-function modalClick() {
-  const modals = document.querySelectorAll(".modal");
-  evt.preventDefault();
-  modals.forEach((modal) => {
-    modal.addEventListener("mousedown", (evt) => {
-      if (evt.target.classList.contains("modal_opened")) {
-        closePopup(modal);
-      }
-    });
-  });
+function handleClickOverlay(e) {
+  if (e.target.classList.contains("modal_opened")) {
+    closePopup(e.target);
+  }
 }
