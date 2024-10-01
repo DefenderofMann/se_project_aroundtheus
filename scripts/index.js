@@ -53,7 +53,6 @@ const previewImageModal = document.querySelector("#modal__image-preview");
 const previewImageClose = document.querySelector("#modal__close-preview");
 const previewImageTitle = document.querySelector(".modal__preview-title");
 const previewImagePic = document.querySelector(".preview__image");
-const modals = document.querySelectorAll(".modal");
 
 function handleProfileEditSubmit(e) {
   e.preventDefault();
@@ -65,12 +64,13 @@ function handleProfileEditSubmit(e) {
 function openPopup(popup) {
   popup.classList.add("modal_opened");
   popup.addEventListener("mousedown", handleClickOverlay);
-  popup.addEventListener("keydown", handleButtonEscape);
+  document.addEventListener("keydown", handleButtonEscape);
 }
 
 function closePopup(popup) {
   popup.classList.remove("modal_opened");
   popup.removeEventListener("mousedown", handleClickOverlay);
+  document.removeEventListener("keydown", handleButtonEscape);
 }
 
 function getCardElement(cardData) {
@@ -149,6 +149,7 @@ function handleClickOverlay(e) {
 
 function handleButtonEscape(e) {
   if (e.key === "Escape") {
-    closePopup(modals);
+    const modal = document.querySelector(".modal_opened");
+    closePopup(modal);
   }
 }
