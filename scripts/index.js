@@ -65,6 +65,7 @@ function handleProfileEditSubmit(e) {
 function openPopup(popup) {
   popup.classList.add("modal_opened");
   popup.addEventListener("mousedown", handleClickOverlay);
+  popup.addEventListener("keydown", handleButtonEscape);
 }
 
 function closePopup(popup) {
@@ -143,5 +144,11 @@ function handleAddCardFormSubmit(evt) {
 function handleClickOverlay(e) {
   if (e.target.classList.contains("modal_opened")) {
     closePopup(e.target);
+  }
+}
+
+function handleButtonEscape(e) {
+  if (e.key === "Escape") {
+    closePopup(modals);
   }
 }
