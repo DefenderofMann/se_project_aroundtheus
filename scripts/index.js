@@ -52,7 +52,7 @@ const cardLinkInput = document.querySelector("#profile__input-type-URL");
 const previewImageModal = document.querySelector("#modal__image-preview");
 const previewImageClose = document.querySelector("#modal__close-preview");
 const previewImageTitle = document.querySelector(".modal__preview-title");
-const previewImagePic = document.querySelector(".preview__image");
+const previewImagePic = document.querySelector(".modal__preview");
 
 function handleProfileEditSubmit(e) {
   e.preventDefault();

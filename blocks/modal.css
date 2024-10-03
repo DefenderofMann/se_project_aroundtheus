@@ -58,11 +58,12 @@
   font-weight: 400;
   line-height: 14.52px;
   text-align: left;
+  margin-right: 137px;
   position: absolute;
   color: rgba(255, 255, 255, 1);
 }
 
-.preview__image {
+.modal__preview {
   width: 433px;
   height: 540px;
   gap: 0px;
@@ -147,7 +148,7 @@
 }
 
 .modal__error {
-  width: 164px;
+  width: fit-content;
   height: 12px;
   top: 142px;
   gap: 0px;
@@ -158,6 +159,11 @@
   text-align: left;
   margin-left: 36px;
   opacity: 0;
+  margin-bottom: 13px;
+}
+
+.modal__error:last-child {
+  margin-bottom: 0;
 }
 
 .modal__input_type_error {
